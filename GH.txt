@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<?php 
+    require('resize.php');
+?>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Redimensionner une image</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hide.css">
+</head>
+<body>
+    <h1>Redimensionner une image</h1>
+    <form enctype="multipart/form-data"  method="POST">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="number" name="largeur" placeholder="Largeur" required>
+        <input type="number" name="hauteur" placeholder="Hauteur" required>
+        <input type="submit" name="submit" value="Redimensionner">
+    </form>
+    <div id="result">
+            <?php
+                ?> 
+                   <img src="uploads/<?=$imagename;?>" alt="image">
+                   <a href="http://localhost:8080/redim%20image/uploads/<?=$imagename;?>"download="<?=$imagename;?>">TELECHARGER L'IMAGE </a> 
+               <?php
+    ?>
+    
+    </div>
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>!-->
+</body>
+</html>
